@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />                                                                              
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+    <div class="keys">
+        <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <!-- <span class="sound">clap</span> -->
+        </div>
+        <div data-key="65" class="key">
+            <kbd>S</kbd>
+            <!-- <span class="sound">clap</span> -->
+        </div>
+
+    </div>
+<audio class = "drumset" data-key="65" src="sound.mp3" type="audio/mpeg"></audio>
+
+
+<script type="text/javascript">
+    window.addEventListener('keydown',function(e){
+        console.log(e);
+        const audio = document.querySelector('audio[class="drumset"]');
+        console.log(audio);
+        audio.play();
+        if(!audio) return;
+        audio.play();
+    });
+</script>
+</body>
+</html>
+    
